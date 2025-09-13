@@ -1,0 +1,119 @@
+/* Reset CSS - cole no topo do arquivo */
+/*  versão compacta moderna */
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/* Box sizing melhor para layouts previsíveis */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens/paddings padrão e define fonte/line-height base */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display fix for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* Base typography */
+html {
+  font-size: 100%; /* 16px por padrão */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.5;
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lists */
+ol, ul {
+  list-style: none;
+}
+
+/* Images, videos e iframes responsivos */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables - layout simples */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Formulários - herdar fontes e resetar estilos estranhos */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+/* Botões com cursor pointer por padrão */
+button {
+  cursor: pointer;
+}
+
+/* Remover aparência nativa em iOS/Android para inputs tipo search */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* Focus visível e acessível (personalize a cor conforme seu tema) */
+:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Preferência por reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
