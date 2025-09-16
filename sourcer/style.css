@@ -1,0 +1,112 @@
+:root {
+    --cor-fundo: linear-gradient(36deg, rgba(224, 0, 0, 1) 0%, rgba(26, 35, 94, 1) 36%, rgba(26, 35, 94, 1) 60%, rgba(0, 0, 0, 1) 100%);
+    ;
+}
+
+body {
+    background: var(--cor-fundo);
+}
+
+.titulo {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin: 10px;
+}
+
+main {
+    color: #fff;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 40px;
+}
+
+.bloco {
+    width: 100px;
+    height: 100px;
+    border: #fff solid 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco:not(.x):not(.o):hover::after,
+.bloco:not(.x):not(.o):hover::before {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.bloco.x,
+.bloco.o {
+    cursor: not-allowed;
+
+}
+
+.bloco.x::after,
+.bloco.x::before,
+.mesa.x .bloco:not(.x):not(.o):hover::before,
+.mesa.x .bloco:not(.x):not(.o):hover::after {
+    content: "";
+    background-color: #fff;
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    position: absolute;
+    border-radius: 15px;
+}
+
+.bloco.x::after,
+.mesa.x .bloco:not(.x):not(.o):hover::after {
+    transform: rotate(45deg);
+}
+
+.bloco.x::before,
+.mesa.x .bloco:not(.x):not(.o):hover::before {
+    transform: rotate(-45deg);
+}
+
+.bloco.o::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: #fff solid 10px;
+}
+
+.mesa.o .bloco:not(.x):not(.o):hover::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: #fff solid 10px;
+    opacity: 0.3;
+    background: transparent !important;
+}
+
+.bloco:nth-child(1),
+.bloco:nth-child(2),
+.bloco:nth-child(3) {
+    border-top: none;
+}
+
+.bloco:nth-child(1),
+.bloco:nth-child(4),
+.bloco:nth-child(7) {
+    border-left: none;
+}
+
+.bloco:nth-child(7),
+.bloco:nth-child(8),
+.bloco:nth-child(9) {
+    border-bottom: none;
+}
+
+.bloco:nth-child(3),
+.bloco:nth-child(6),
+.bloco:nth-child(9) {
+    border-right: none;
+}
