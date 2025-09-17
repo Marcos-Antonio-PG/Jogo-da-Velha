@@ -110,3 +110,41 @@ main {
 .bloco:nth-child(9) {
     border-right: none;
 }
+
+.victory-draw-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.victory-draw-text {
+    color: #fff;
+    font-size: 30px;
+}
+
+.botao-reiniciar {
+    font-size: 25px;
+    color: #fff;
+    background-color: #1d851d;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: #fff solid 4px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.botao-reiniciar:hover {
+    color: #1d851d;
+    background-color: #fff;
+    border: #1d851d solid 4px;
+}
