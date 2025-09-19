@@ -2,6 +2,7 @@ const blocos = document.querySelectorAll("#bloco")
 const mesa = document.getElementById('mesa')
 const telaFinal = document.querySelector('.tela-vitoria-empate')
 const textoFinal = document.querySelector('.texto-vitoria-empate')
+const botaoReiniciar = document.getElementById('botao-reiniciar')
 
 let vezCirculo = false
 
@@ -21,6 +22,8 @@ const comecarJogo = () => {
         bloco.addEventListener("click", clique, { once: true })
     }
 
+    vezCirculo = false
+    
     mesa.classList.add("x")
 }
 
@@ -38,6 +41,18 @@ const verificarEmpate = () => {
             bloco.classList.contains('o')
     })
 }
+
+botaoReiniciar.addEventListener('click', () => {
+    blocos.forEach(bloco => {
+        telaFinal.style.display = 'none'
+        mesa.classList.remove('x')
+        mesa.classList.remove('o')
+        bloco.classList.remove('x')
+        bloco.classList.remove('o')
+
+        comecarJogo()
+    })
+})
 
 const terminarJogo = (empate) => {
 
@@ -89,3 +104,4 @@ const clique = (e) => {
 
 comecarJogo()
 
+reiniciarJogo()
