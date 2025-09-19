@@ -111,7 +111,7 @@ main {
     border-right: none;
 }
 
-.victory-draw-panel {
+.tela-vitoria-empate {
     position: fixed;
     top: 0;
     right: 0;
@@ -126,7 +126,7 @@ main {
     gap: 20px;
 }
 
-.victory-draw-text {
+.texto-vitoria-empate {
     color: #fff;
     font-size: 30px;
 }
