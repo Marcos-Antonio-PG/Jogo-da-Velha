@@ -16,12 +16,42 @@ const combinacoesVitoria = [
     [6, 4, 2]
 ]
 
+const comecarJogo = () => {
+    for (const bloco of blocos) {
+        bloco.addEventListener("click", clique, { once: true })
+    }
+
+    mesa.classList.add("x")
+}
+
 function verificarVitoria(jogadorAtual) {
     return combinacoesVitoria.some((combination) => {
         return combination.every((index) => {
             return blocos[index].classList.contains(jogadorAtual)
         })
     })
+}
+
+const verificarEmpate = () => {
+    return [...blocos].every(bloco => {
+        return bloco.classList.contains('x') ||
+            bloco.classList.contains('o')
+    })
+}
+
+const terminarJogo = (empate) => {
+
+    telaFinal.style.display = 'flex'
+
+    if (empate) {
+        textoFinal.innerHTML = 'Empate!'
+    } else {
+        if (mesa.classList.contains('o')) {
+            textoFinal.innerHTML = 'Círculo Ganhou!'
+        } else if (mesa.classList.contains('x')) {
+            textoFinal.innerHTML = 'Xis Ganhou!'
+        }
+    }
 }
 
 const trocarJogador = () => {
@@ -44,23 +74,18 @@ const clique = (e) => {
     bloco.classList.add(adicionarClasse)
 
     const vitoria = verificarVitoria(adicionarClasse)
-    if (vitoria) {
-        telaFinal.style.display = 'flex'
 
-        if (mesa.classList.contains('o')) {
-            textoFinal.innerHTML = 'Círculo Ganhou!'
-        } else if (mesa.classList.contains('x')) {
-            textoFinal.innerHTML = 'Xis Ganhou!'
-        } else { 
-            
-        }
-        
-        
+    const empate = verificarEmpate()
+
+    if (empate) {
+        terminarJogo(true)
+    } else if (vitoria) {
+        terminarJogo(false)
     }
 
     trocarJogador()
+
 }
 
-for (const bloco of blocos) {
-    bloco.addEventListener("click", clique, {once:true})
-}
+comecarJogo()
+
