@@ -14,6 +14,68 @@ body {
     margin: 10px;
 }
 
+.painel-nomes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    align-items: center;
+    background: rgba( 0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.caixas-texto {
+    display: flex;
+    gap: 50px;    
+}
+
+.texto-nomes {
+    color: #fff;
+    font-size: 20px;
+}
+
+.caixa-texto-x, .caixa-texto-o {
+    display: flex;
+    flex-direction: column;
+}
+#nome-x, #nome-o {
+    background-color: #fff;
+    padding: 5px;
+    width: 250px;
+}
+
+#nome-x {
+    border: 5px solid #ff0000;
+}
+
+#nome-o {
+    border: 5px solid #0000ff;
+}
+
+.botao-pronto {
+     font-size: 25px;
+    color: #fff;
+    background-color: #1d851d;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: #fff solid 4px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.botao-pronto:hover {
+    color: #1d851d;
+    background-color: #fff;
+    border: #1d851d solid 4px;
+}
+
 main {
     color: #fff;
     display: grid;

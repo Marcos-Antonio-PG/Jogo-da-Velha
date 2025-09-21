@@ -3,6 +3,26 @@ const mesa = document.getElementById('mesa')
 const telaFinal = document.querySelector('.tela-vitoria-empate')
 const textoFinal = document.querySelector('.texto-vitoria-empate')
 const botaoReiniciar = document.getElementById('botao-reiniciar')
+const inputX = document.getElementById('nome-x')
+const inputO = document.getElementById('nome-o')
+const botaoPronto = document.getElementById('botao-pronto')
+const painelNomes = document.querySelector('.painel-nomes')
+
+function pronto() {
+
+    const nomeX = inputX.value
+    const nomeO = inputO.value
+
+    if (nomeX == '' || nomeO == '') {
+        alert('Digite Nomes Válidos Para Poder Jogar')
+    } else {
+        painelNomes.style.display = 'none'
+    }
+}
+
+botaoPronto.addEventListener('click', () => {
+    pronto()
+})
 
 let vezCirculo = false
 
@@ -56,15 +76,18 @@ botaoReiniciar.addEventListener('click', () => {
 
 const terminarJogo = (empate) => {
 
+    const nomeX = inputX.value
+    const nomeO = inputO.value
+
     telaFinal.style.display = 'flex'
 
     if (empate) {
         textoFinal.innerHTML = 'Empate!'
     } else {
         if (mesa.classList.contains('o')) {
-            textoFinal.innerHTML = 'Círculo Ganhou!'
+            textoFinal.innerHTML = `${nomeO} Ganhou!`
         } else if (mesa.classList.contains('x')) {
-            textoFinal.innerHTML = 'Xis Ganhou!'
+            textoFinal.innerHTML = `${nomeX} Ganhou!`
         }
     }
 }
@@ -103,5 +126,3 @@ const clique = (e) => {
 }
 
 comecarJogo()
-
-reiniciarJogo()

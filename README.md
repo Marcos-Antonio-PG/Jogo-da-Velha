@@ -15,3 +15,8 @@ Para verificar se houve uma vitória, foi armazenado em um array todas as combin
 Para identificar se houve um empate, o JS lê todas as divs, se todas estiverem com uma classe "x" ou "o" e não for identificada nenhuma vitória, a mesma tela de vitória/empate é mostrada mas com o texto "Empate!" e novamente o botão reiniciar é mostrado.
 
 Para reiniciar o jogo quando o botão de reiniciar é clicado, o JS remove todas as classes das divs e aplica display: none na tela de vitória/empate e ativa a função comecarJogo() que organiza a ordem de quem começará o jogo para que não ocorreça o erro de aparecer o Xis no hover mas o Círculo ser aplicado.
+
+Atualização 1: 
+
+Agora, antes de poder jogar, o jogo pede os nomes dos jogadores através de dois inputs de texto, dependendo do quem vencer, o nome do jogador correspondente aparecerá na tela, invés de "Xis Ganhou!" aparecerá "Marcos Ganhou!", por exemplo.
+
