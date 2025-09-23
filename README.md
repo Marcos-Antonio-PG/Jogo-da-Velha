@@ -4,9 +4,9 @@ Site básico que usa HTML,  CSS e JavaSript para montar um jogo da vellha comple
 
 O site funciona da seguinte maneira:
 
-A "mesa" do jogo (traços que forman o jogo da velha) foi criada usando 9 divs que foram colocadas dentro de uma main com display grid, isso faz com que seja criada as 9 divs em 3 colunas e 3 linhas, foi então colocado bordas brancas em todas as divs pra que seja criado o "desenho" de 9 quadrados, depois foram removidas as bordas apenas das laterais, de cima e de baixo desse desenho e isso resultou no desenho perfeito do Jogo Da Velha.
+A "mesa" do jogo (traços que formam o jogo da velha) foi criada usando 9 divs que foram colocadas dentro de uma main com display: grid, isso faz com que seja criada as 9 divs em 3 colunas e 3 linhas, depois foi colocado bordas brancas em todas as divs pra que seja criado o "desenho" de 9 quadrados, foram removidas as bordas apenas das laterais, de cima e de baixo desse desenho e isso resultou no desenho perfeito do Jogo Da Velha.
 
-Para criar o Xis e o Círculo, foram usados formas e hover no CSS, assim é possível ver o Xis ou Círculo só de passar o mouse pena tela.
+Para criar o Xis e o Círculo, foram usados formas e hover no CSS, assim é possível ver o Xis ou Círculo só de passar o mouse pela tela.
 
 No JavaScript para que fosse possível clicar na mesa do jogo e adicionar o símbolo, foi criada uma função que adiciona o Círculo se for a vez dele de jogar, se não for, o Xis será adicionado, toda essa adição de símbolos é feita pelo JS que adiciona a classe "x" ou "o" na div correspondente.
 
@@ -22,4 +22,4 @@ Agora, antes de poder jogar, o jogo pede os nomes dos jogadores através de dois
 
 Atualização 2:
 
-Foi adicionado animações na tela de vitória ou empate, o nome do vencedor agora fica estilizado em vermelho ou azul e pulsa com um efeito de brilho através de text-shadow.
+Foi adicionado animações na tela de vitória ou empate através de keyframes, o nome do vencedor agora fica estilizado em vermelho ou azul e pulsa com um efeito de brilho através de text-shadow.
