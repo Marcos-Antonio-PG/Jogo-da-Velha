@@ -191,6 +191,47 @@ main {
 .texto-vitoria-empate {
     color: #fff;
     font-size: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.empate {
+    font-family: "Share Tech", sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    animation: pulsar ease-in-out 2s infinite;
+}
+
+.vitoria-x {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 900;
+    color: #ea6363;
+    text-shadow: 0 0 10px rgb(214, 63, 63);
+    font-size: 40px;
+    animation: pulsar ease-in-out 2s infinite;
+}
+
+.vitoria-o {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 900;
+    color: #7777ee;
+    text-shadow: 0 0 10px rgb(78, 78, 215);
+    font-size: 40px;
+    animation: pulsar ease-in-out 2s infinite;
 }
 
 .botao-reiniciar {

@@ -20,3 +20,6 @@ Atualização 1:
 
 Agora, antes de poder jogar, o jogo pede os nomes dos jogadores através de dois inputs de texto, dependendo do quem vencer, o nome do jogador correspondente aparecerá na tela, invés de "Xis Ganhou!" aparecerá "Marcos Ganhou!", por exemplo.
 
+Atualização 2:
+
+Foi adicionado animações na tela de vitória ou empate, o nome do vencedor agora fica estilizado em vermelho ou azul e pulsa com um efeito de brilho através de text-shadow.

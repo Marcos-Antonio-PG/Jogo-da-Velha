@@ -82,12 +82,12 @@ const terminarJogo = (empate) => {
     telaFinal.style.display = 'flex'
 
     if (empate) {
-        textoFinal.innerHTML = 'Empate!'
+        textoFinal.innerHTML = '<p class="empate">EMPATE!</p>'
     } else {
         if (mesa.classList.contains('o')) {
-            textoFinal.innerHTML = `${nomeO} Ganhou!`
+            textoFinal.innerHTML = `<p><p class="vitoria-o">${nomeO.toUpperCase()}</p>Ganhou!</p>`
         } else if (mesa.classList.contains('x')) {
-            textoFinal.innerHTML = `${nomeX} Ganhou!`
+            textoFinal.innerHTML = `<p><p class="vitoria-x">${nomeX.toUpperCase()}</p>Ganhou!</p>`
         }
     }
 }
